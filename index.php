@@ -8,6 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $acompanhamento = $_POST["acompanhamento"] ?? '';
 
     $total = $bebida + $adicional + $acompanhamento;
+    $total = number_format($total, 2, ',', '.');
 
 
  
@@ -128,8 +129,8 @@ select{
             <option value="">Selecione</option>
             <option value="15.30">Matcha - 15,30$</option>
             <option value="16.50">Iced Pistache Latte - 16,50$</option>
-            <option value="21.8">Frappuccino choco - 21,78$</option>
-            <option value="17.43">Pink lemonade - 17,43$</option>
+            <option value="21.80">Frappuccino choco - 21,80$</option>
+            <option value="17.50">Pink lemonade - 17,50$</option>
         </select>
     </div>
  
@@ -148,9 +149,9 @@ select{
  
     <div class="grupo">
         <label>Acompanhamento</label><br>
-        <input type="radio" name="acompanhamento" value= "16.67" required> Cookie chocolate 16,67$<br>
-        <input type="radio" name="acompanhamento" value= "21.76"> Bolo morango 21,76$<br>
-        <input type="radio" name="acompanhamento" value= "5.67"> Pão de queijo 5,67$<br>
+        <input type="radio" name="acompanhamento" value= "16.65" required> Cookie chocolate 16,65$<br>
+        <input type="radio" name="acompanhamento" value= "21.70"> Bolo morango 21,70$<br>
+        <input type="radio" name="acompanhamento" value= "5.65"> Pão de queijo 5,65$<br>
         <input type="radio" name="acompanhamento" value="0"> Não quero acompanhamento
     </div>
  
